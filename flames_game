@@ -1,0 +1,21 @@
+name1=input("enter name 1:")
+name2=input("enter name 2:")
+list1=list(name1)
+list2=list(name2)
+for i in range(len(list1)):
+    for j in range(len(list2)):
+        if(list1[i]==list2[j]):
+            list1[i]="*"
+            list2[j]="*"
+            
+a=len(list1)-list1.count("*")
+b=len(list2)-list2.count("*")
+total=a+b
+ans=["FRIENDS","LOVERS","AFFECTION","MARRIAGE","ENEMY","SISTER"]
+
+f=0
+
+while len(ans)!=1:
+    f=(f+total-1)%len(ans)
+    ans.pop(f)
+print(ans)
