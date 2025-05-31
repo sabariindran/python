@@ -1,0 +1,53 @@
+import time
+import random
+name1=input("enter name player 1:")
+name2=input("enter name player 2:")
+print("hello {} player number 1 and hello {} player number 2".format(name1,name2))
+print("computer has stored the number in mind")
+num=[]
+
+while(len(num)!=5):
+    d=random.randint(1,5)
+    if(d in num):
+        continue
+    else:
+        num.append(d)
+
+player1=[]
+player2=[]
+score1=0
+score2=0
+
+for i in range(3):
+    print("enter your ans {}".format(name1))
+    ans1=int(input())
+    while(ans1 in player1 or ans1 in player2):
+        ans1=int(input("already guessed enter another number"))
+        player1.append(ans1)
+        if(ans1 in num):
+            print("correct answer")
+            score1+=1
+        else:
+            print("wrong answer")
+    
+        
+    print("enter your ans {}".format(name2))
+    ans2=int(input())
+    while(ans2 in player1 or ans2 in player2):
+        ans2=int(input("already guessed enter another number"))
+        player2.append(ans2)
+        if(ans2 in num):
+            score2+=1 
+            print("correct answer")
+        else:
+            print("wrong answer")
+
+print("computer answer{}".format(num))
+print("\n")
+
+if(score1>score2):
+    print("{} is winner".format(name1))
+elif(score2>score1):
+    print("{} is winner".format(name2))
+else:
+    print("match is drawn")
