@@ -1,0 +1,10 @@
+def ram(n):
+    if(n==1):
+        return
+    n=n-1
+    ram(n)
+    print("hai")
+    ram(n)
+    
+    
+ram(5)
