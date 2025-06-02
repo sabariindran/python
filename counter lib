@@ -1,0 +1,7 @@
+from collections import Counter
+b=[1,1,1,1,2,2,2,3,3,3,4,15,15,5,5,5]
+a=[5,5,5,5,5,3,3,3]
+a1=Counter(b)
+b2=Counter(a)
+print(b2-a1)
+    
