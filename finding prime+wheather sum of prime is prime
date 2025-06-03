@@ -13,4 +13,4 @@ def sum1(a):
 for i in range(100,1000):
     if(prime(i) and prime(sum1(i))):
         print(i)
-        `
+        
