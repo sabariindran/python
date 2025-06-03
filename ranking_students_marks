@@ -1,0 +1,21 @@
+def calculatedPercentage(person):
+    total_marks=sum(person["marks"])
+    return(total_marks/4)
+    
+a=[{"name":"raju","marks":[22,33,44,55]},
+{"name":"virat","marks":[33,11,45,33]},
+{"name":"james","marks":[77,33,55,22]}]
+
+b=sorted(a,key=calculatedPercentage,reverse=True)
+pos=1
+for i in b:
+    if pos==1:
+        des="first"
+    elif pos==2:
+        des="second"
+    elif pos==3:
+        des="third"
+        
+    percentage=calculatedPercentage(i)
+    print("{} stands {} with {}".format(i["name"],des,percentage))
+    pos+=1
