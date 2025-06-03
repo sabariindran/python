@@ -1,0 +1,13 @@
+def pf(a):
+    i=2
+    
+    if(a==1):
+        return
+    
+    while (a%i != 0):
+        i+=1
+    print(i)
+    
+    pf(a//i)
+
+pf(100) 
