@@ -1,0 +1,28 @@
+class rect():
+   
+    def set_dim(self,l,b):
+        self.l=l
+        self.b=b
+    
+    def peri(self):
+        print(2*(self.l+self.b))
+        
+    def area(self):
+        print(self.l*self.b)
+        
+s=[]
+n=int(input("enter number of rectangles:"))
+
+for i in range(n):
+    r=rect()
+    l=int(input("enter the length of rec {} : ".format(i+1)))
+    b=int(input("enter the breath of rec {} :" .format(i+1)))
+    r.set_dim(l,b)
+    s.append(r)
+    
+for i in range(n):
+    print("----------------")
+    print("the area and perimenter of {} is:".format(i+1))
+    s[i].area()
+    s[i].peri()
+    
