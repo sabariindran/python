@@ -1,0 +1,8 @@
+def convert(a):
+    l=[]
+    for i in range(len(a)):
+        b=a[i]
+        ad=l.append(b.title())
+    print(l)
+a=["sashank","aRya","PANDyA","rAINA","hussYY"]
+convert(a)
