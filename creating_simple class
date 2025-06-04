@@ -1,12 +1,49 @@
 class simple:
-    def add(self,a,b):
+#no arg(with self)=1
+    
+    def add(self):
         return self.a+self.b
     
-    def dis(self):
-        print("RCb is WON")
-            
-            
+#binding of data no arg and set (with self)=2
+    
+
+    
+#with arg no self =3
+    
+    def rectangle(self,l,b):
+        print(l*b)
+        
+#4 simple oops with multiple scope
+
+    def set_dim(self,a,b):
+        self.a=a
+        self.b=b
+    
+    def length(self):
+        print(self.a)
+        
+    def breath(self):
+        print(self.b)
+        
+    def calculate(self):
+        print(self.a*self.b)
+        
+        
+#1 OUTPUT
+
 s=simple()
-s.a=20
-s.b=40
-print(s.add(s.a,s.b))
+#.a=10
+#.b=39
+#print(s.add())
+
+#2 OUTPUT
+
+
+#3 OUTPUT
+s.rectangle(3,6)
+
+#4 OUTPUT
+s.set_dim(22,33)
+s.length()
+s.breath()
+s.calculate()
