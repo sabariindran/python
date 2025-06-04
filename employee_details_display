@@ -1,0 +1,42 @@
+class EmpDetails:
+    
+    comapany="cognizant"
+    c_share="100000 rs"
+    
+    def set_dim(self,name,age,salary,comapany="coginzant",comp_share="100000"):
+        self.name=name
+        self.age=age
+        self.salary=salary
+        self.comapany=comapany
+        self.comp_share=comp_share
+        self.tax=self.salary*0.1
+        self.share=self.salary*0.05
+
+    def dis(self):
+        print("Name:",self.name)
+        print("Age:",self.age)
+        print("Salary:",self.salary)
+        print("Comapany:",EmpDetails.comapany)
+        print("Company Share:",EmpDetails.c_share)
+        print("Share of Employee:",self.share)
+        print("Tax Of Employee:",self.tax)
+        print("-----------------------------")
+        
+a1=EmpDetails()
+
+a1.name=input("Enter Name Of 1st Employee : ")
+a1.age=int(input("Enter The Age Of 1st Employee : "))
+a1.salary=int(input("Enter The Salary Of 1st Employee : "))
+
+
+a2=EmpDetails()
+
+a2.name=input("Enter Name Of 2nd Employee : ")
+a2.age=int(input("Enter The Age Of 2nd Employee : "))
+a2.salary=int(input("Enter The Salary Of 2nd Employee : "))
+
+a1.set_dim(a1.name,a1.age,a1.salary)
+a1.dis()
+
+a2.set_dim(a2.name,a2.age,a2.salary)
+a2.dis()
