@@ -1,0 +1,5 @@
+def add(*args):
+    print(sum(args))
+    
+add(22,1,22)
+add(2,11,22,3)
