@@ -1,0 +1,6 @@
+names=["abc","efg","xyz","lmn","pqr","uvw","aaa","ccc","eee","ttt"]
+salary=[10000,20000,12000,55000,45000,20000,26000,60000,17000,25000]
+memo=[0,1,1,1,2,3,2,0,2,2]
+b=list(zip(names,salary,memo))
+res=[(names,salary,memo) for names,salary,memo in b if salary>=40000 or memo>=2]
+print(res)
