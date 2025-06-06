@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+overs=np.arange(1,11)
+score=[2,33,11,30,4,3,4,2,10,22]
+plt.plot(overs,score,color="blue")
+plt.title("INDIA TEAM OVER")
+plt.xlabel("OVER NUMBER")
+plt.ylabel("RUNS SCORED")
+plt.xticks(overs)
+plt.grid(axis="both",alpha=0.3)
+plt.show()
