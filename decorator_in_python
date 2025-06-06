@@ -1,0 +1,32 @@
+#decorator:-a decorator is a function that that behaviour of another
+# function without changing its code
+#it is like wrapping a gift
+import time
+
+def decorator_decorator(original_function):
+    def wrapper1():
+        print("```````````````")
+        original_function()
+        print("```````````````")
+    return wrapper1
+
+@decorator_decorator
+def abc():
+    print("hello world")
+
+
+
+def decorator_decorator1(func):
+    def wrapper2(*ars,**kwargs):
+        start=time.time()
+        result = func(*ars,**kwargs)
+        end=time.time()
+        print("time taken",end-start)
+        return result
+
+@decorator_decorator1
+def efg():
+    time.sleep(5)
+    print("hello world")
+
+print(efg())
